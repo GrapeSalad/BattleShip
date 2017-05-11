@@ -41,8 +41,10 @@ shipEngine.prototype.shipPosition = function(ship){
   function isBorderColumn(centerCoordinate){
     var bool = false;
     for(i=0; i<ship.VerticalException.length; i++){
+      var borderCell = ship.VerticalException[i];
       if(centerCoordinate === ship.VerticalException[i]){
         bool = true;
+        break;
       }
       else {
         bool = false;
