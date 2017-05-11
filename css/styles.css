@@ -1,3 +1,44 @@
+body {
+  background: #000 url("battleshipBackground.jpeg") no-repeat fixed center;
+}
+
+h1{
+  margin: 10px auto;
+  text-align: center;
+  width: 300px;
+  background: rgba(115, 115, 106, 0.5);
+  border: 1px solid #000;
+  border-radius: 25px;
+}
+
+p {
+  font-size: 18px;
+  width: 50%;
+  text-align: center;
+  background: rgba(115, 115, 106, 0.5);
+}
+
+p.left{
+  float: left;
+  border-radius: 10px 0 0 10px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+p.right {
+  float: right;
+  border-radius: 0 10px 10px 0;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+table {
+  margin-top: 5%;
+  border: 5px solid #000;
+}
+
 td{
   background-color: #89c4f4;
   border: 1px solid black;
@@ -29,4 +70,37 @@ td.hitBody {
 
 td.hitEnd {
   background-image: url("shipend.png");
+}
+
+#button {
+  margin: 10px;
+}
+
+#resetButton  {
+  border: 1px solid #000;
+}
+
+footer {
+	margin: 0 auto -50px;
+  padding: 10px auto;
+  height: 15px;
+  width: 700px;
+	font-weight: bold;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  border-width: 1px 1px 0;
+  border-style: solid;
+  border-color: #FDFBFF;
+  border-radius: 4px 4px 0 0;
+}
+
+footer p {
+  background-color: rgba(56, 56, 56, 0.8);
+  width: auto;
+  color: #000;
+  border-radius: 4px 4px 0 0;
 }
