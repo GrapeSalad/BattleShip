@@ -1,8 +1,16 @@
 td{
-  background-color: #313138;
+  background-color: #89c4f4;
   border: 1px solid black;
   width: 60px;
   height: 60px;
   color: white;
   text-align: center;
+}
+
+td:hover{
+  background-image: url("fixedTarget.png");
+}
+
+td:active{
+  background-image: url("explosion.png");
 }
