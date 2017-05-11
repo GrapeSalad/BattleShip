@@ -1,18 +1,36 @@
 $(document).ready(function(){
   var shipCoordinates = USSJhin.shipPosition(USSJhin);
+  var shipCoordinates1 = USSPudge.shipPosition(USSPudge);
   // for(i=0; i<3; i++){
   //   console.log(shipCoordinates[i]);
   // }
   console.log(shipCoordinates);
   $("td.operator").click(function(){
-    var bombLocation =parseInt($(this).text());
+    var bombLocation = parseInt($(this)[0].id);
     console.log(bombLocation);
 
     if(bombLocation === shipCoordinates[0] || bombLocation === shipCoordinates[1] || bombLocation === shipCoordinates[2]){
-      alert("You defeated the Navy!");
+      if(bombLocation === shipCoordinates[0]){
+        $(this).addClass("hitFront");
+      }else if(bombLocation === shipCoordinates[1]){
+        $(this).addClass("hitBody");
+      }else {
+        $(this).addClass("hitEnd");
+      }
     }
     else{
-      alert("You missed! The ship is still out there.");
+      $(this).addClass("hitFail");
+    }if(bombLocation === shipCoordinates1[0] || bombLocation === shipCoordinates1[1] || bombLocation === shipCoordinates1[2]){
+      if(bombLocation === shipCoordinates1[0]){
+        $(this).addClass("hitFront");
+      }else if(bombLocation === shipCoordinates1[1]){
+        $(this).addClass("hitBody");
+      }else {
+        $(this).addClass("hitEnd");
+      }
+    }
+    else{
+      $(this).addClass("hitFail");
     }
   });
 });
@@ -24,6 +42,7 @@ function shipEngine() {
 }
 // Create a new ship object
 var USSJhin = new shipEngine();
+var USSPudge = new shipEngine();
 //method to generate random numbers
 shipEngine.prototype.randomNumberGenerator = function(min, max){
   min = Math.ceil(min);

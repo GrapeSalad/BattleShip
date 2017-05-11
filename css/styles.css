@@ -14,3 +14,19 @@ td:hover{
 td:active{
   background-image: url("explosion.png");
 }
+
+td.hitFail {
+  background-image: url("waterSplash.png");
+}
+
+td.hitFront {
+  background-image: url("shipfront.png");
+}
+
+td.hitBody {
+  background-image: url("shipbody.png");
+}
+
+td.hitEnd {
+  background-image: url("shipend.png");
+}
